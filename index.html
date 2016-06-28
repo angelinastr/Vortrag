@@ -1,0 +1,251 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Tabellen </title>
+  <link href="CSS/stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="full-screen">
+  <div class="left"> <h1> HTML Tabellen </h1>
+  </div>
+  <div class="middle">
+  <h2> Allgemein </h2>
+  <p>
+    - HTML-Tabellen werden nur für die Darstellung von tabellarische Daten verwendet </br>
+    - früher wurden mit Tabellen ganze Webseiten layoutet - heute nicht mehr! Trennung von Inhalt und Layout mit HTML und CSS!
+  </p> </br>
+  <h2> Aufbau </h2>
+  <p>
+    - jede Tabelle wird mit "table" geöffnet und geschlossen </br>
+    - jede Tabelle besteht aus Zeilen "tr" (Table Row) und deren Zellen "td" (=Spalten) </br>
+    - Zellen können mit "th" (Überschriften = Table Header) oder "td" (Zeilen = Table Data) defininiert werden </br> </br>
+  </p>
+  <div class="code">
+    -table- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -th- Zeile 1 Spalte 1 -/th- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -th- Zeile 1 Spalte 2 -/th- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -th- Zeile 1 Spalte 3 -/th- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 1 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 1 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    -/table- </br>
+  </div> </br>
+
+  <table border="1" width="500" height="500">
+    <tr>
+      <th> Zeile 1 Spalte 1 </th>
+      <th> Zeile 1 Spalte 2 </th>
+      <th> Zeile 1 Spalte 3 </th>
+    </tr>
+    <tr>
+      <td> Zeile 2 Spalte 1 </td>
+      <td> Zeile 2 Spalte 2 </td>
+      <td> Zeile 2 Spalte 3 </td>
+    </tr>
+    <tr>
+      <td> Zeile 3 Spalte 1 </td>
+      <td> Zeile 3 Spalte 2 </td>
+      <td> Zeile 3 Spalte 3 </td>
+    </tr>
+  </table>
+
+</br> </br>
+  <h2> Strukturierung </h2>
+  <p>
+    - genauso wie das ganze Dokument kann man auch die Tablle in Header, Body und Footer unterteilen: </br> </br>
+  </p>
+  <div class="code">
+    -table- </br>
+    &nbsp; &nbsp; -thead- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -th- -/th- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; -/thead- </br>
+    &nbsp; &nbsp; -tbody- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -th- -/th- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; -/tbody- </br>
+    &nbsp; &nbsp; -tfoot- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -th- -/th- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; -/tfoot- </br>
+    -/table- </br>
+  </div>
+
+</br> </br>
+  <h2> Gestaltung </h2>
+  <p>
+    - die Layout-Gestaltung wird in CSS vorgenommen (border, color, width, height) </br>
+    - in HTML können dennoch inhaltliche Veränderungen an der Tabelle vorgenommen werden: "col" / "colgroup", "colspan" / "rowspan" </br>
+    - mit "col" / "colgroup" können Zeilen vorab definitiert werden (z.B. width, height) </br> </br>
+  </p>
+  <div class="code">
+    -table- </br>
+    &nbsp; &nbsp; -colgroup- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -col width="150"- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -col width="150"- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -col width="500"- </br>
+    &nbsp; &nbsp; -/colgroup- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 1 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 1 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    -/table- </br>
+  </div> </br>
+
+  <table border="1" height="200">
+    <colgroup>
+      <col width="150">
+      <col width="150">
+      <col width="500">
+    </colgroup>
+    <tr>
+       <td> Zeile 1 Spalte 1 </td>
+       <td> Zeile 1 Spalte 2 </td>
+       <td> Zeile 1 Spalte 3 </td>
+    </tr>
+    <tr>
+       <td> Zeile 2 Spalte 1 </td>
+       <td> Zeile 2 Spalte 2 </td>
+       <td> Zeile 2 Spalte 3 </td>
+    </tr>
+  </table>
+</br>
+  <p>
+    - mit "colspan"/"rowspan" kann man Zeilen und Spalten verbinden </br>
+    - "colspan" = Zeilen verbinden </br>
+    - übergreifende Zeilen werden weggelassen </br> </br>
+  </p>
+  <div class="code">
+  -table- </br>
+  &nbsp; &nbsp; -tr- </br>
+  &nbsp; &nbsp; &nbsp; &nbsp; -td colspan="3"- Zeile 1 -/td- </br>
+  &nbsp; &nbsp; -/tr- </br>
+  &nbsp; &nbsp; -tr- </br>
+  &nbsp; &nbsp; -td- Zeile 2 Spalte 1 -/td- </br>
+  &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 2 -/td- </br>
+  &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 3 -/td- </br>
+  &nbsp; &nbsp; -/tr- </br>
+  &nbsp; &nbsp; -tr- </br>
+  &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 1 -/td- </br>
+  &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 2 -/td- </br>
+  &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td- </br>
+  &nbsp; &nbsp; -/tr- </br>
+  -/table- </br>
+</div> </br>
+
+  <table border="1" width="500" height="500">
+    <tr>
+      <th colspan="3"> Zeile 1 </th>
+    </tr>
+    <tr>
+      <td> Zeile 2 Spalte 1 </td>
+      <td> Zeile 2 Spalte 2 </td>
+      <td> Zeile 2 Spalte 3 </td>
+    </tr>
+    <tr>
+      <td> Zeile 3 Spalte 1 </td>
+      <td> Zeile 3 Spalte 2 </td>
+      <td> Zeile 3 Spalte 3 </td>
+    </tr>
+  </table>
+
+  <p>
+    - "rowspan"= Spalten verbinden </br>
+    - übergreifende Spalten werden wegelassen </br> </br>
+  </p>
+  <div class="code">
+    -table- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td rowspan="3"- Spalte 1 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    -/table- </br>
+  </div> </br>
+
+  <table border="1" width="500" height="500">
+    <tr>
+      <th rowspan="3"> Spalte 1 </th>
+      <th> Zeile 1 Spalte 2 </th>
+      <th> Zeile 1 Spalte 3 </th>
+    </tr>
+    <tr>
+      <td> Zeile 2 Spalte 2 </td>
+      <td> Zeile 2 Spalte 3 </td>
+    </tr>
+    <tr>
+      <td> Zeile 3 Spalte 2 </td>
+      <td> Zeile 3 Spalte 3 </td>
+    </tr>
+  </table>
+
+</br> </br>
+
+  <p>
+    - "colspan" und "rowspan" kombinieren </br> </br>
+  </p>
+  <div class="code">
+    -table- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td rowspan="2" colspan="3"- Zeile 1-2 Spalte 1-2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 1 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 2 -/td- </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td_ </br>
+    &nbsp; &nbsp; -/tr- </br>
+    -/table- </br>
+  </div> </br>
+
+  <table border="1" width="500" height="500">
+    <tr>
+      <td rowspan="2" colspan="2">Zeile 1-2 Spalte 1-2</td>
+      <td> Zeile 1 Spalte 3 </td>
+    </tr>
+    <tr>
+      <td> Zeile 2 Spalte 3 </td>
+    </tr>
+    <tr>
+      <td> Zeile 3 Spalte 1 </td>
+      <td> Zeile 3 Spalte 2 </td>
+      <td> Zeile 3 Spalte 3 </td>
+    </tr>
+  </table>
+  </div>
+  <div class="right">
+  </div>
+</div>
+</body>
+
+</html>
