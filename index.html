@@ -89,6 +89,10 @@
   <p>
     - die Layout-Gestaltung wird in CSS vorgenommen (border, color, width, height) </br>
     - in HTML können dennoch inhaltliche Veränderungen an der Tabelle vorgenommen werden: "col" / "colgroup", "colspan" / "rowspan" </br>
+  </p> </br>
+
+  <h3> Col / Colgroup </h3>
+  <p>
     - mit "col" / "colgroup" können Zeilen vorab definitiert werden (z.B. width, height) </br> </br>
   </p>
   <div class="code">
@@ -129,6 +133,8 @@
     </tr>
   </table>
 </br>
+
+  <h3> Colspan / Rowspan </h3>
   <p>
     - mit "colspan"/"rowspan" kann man Zeilen und Spalten verbinden </br>
     - "colspan" = Zeilen verbinden </br>
@@ -223,7 +229,7 @@
     &nbsp; &nbsp; -tr- </br>
     &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 1 -/td- </br>
     &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 2 -/td- </br>
-    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td_ </br>
+    &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td- </br>
     &nbsp; &nbsp; -/tr- </br>
     -/table- </br>
   </div> </br>
@@ -242,8 +248,22 @@
       <td> Zeile 3 Spalte 3 </td>
     </tr>
   </table>
-  </div>
-  <div class="right">
+
+  <h3> Tipp für Colspan und Rowspan </h3>
+  <p>
+    - Es hilft, wenn das Tabellensystem im Code wiedergespiegelt wird!
+  </p> </br>
+
+  <div class="code">
+    -table- </br>
+    &nbsp; &nbsp; -tr- -td rowspan="2" colspan="3"- Zeile 1-2 Spalte 1-2 -/td- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 1 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 2 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    &nbsp; &nbsp; -tr-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 1 -/td-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-td- Zeile 3 Spalte 2 -/td- &nbsp; &nbsp; &nbsp; -td- Zeile 3 Spalte 3 -/td- </br>
+    &nbsp; &nbsp; -/tr- </br>
+    -/table- </br>
+  </div> </br> </br> </br>
   </div>
 </div>
 </body>
